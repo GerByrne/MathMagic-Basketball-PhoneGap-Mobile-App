@@ -1,0 +1,144 @@
+Manifest-Version: 1.0
+Created-By: 1.0 (Android)
+
+Name: assets/www/images/wizard_icon.ico
+SHA1-Digest: VGRc9Ihbn4SLDcslSdKMjPXzOaQ=
+
+Name: assets/www/images/googleplus.png
+SHA1-Digest: wCXuezx1A848R1hqq7mvjLiO2AU=
+
+Name: assets/www/js/fastclick.js
+SHA1-Digest: eOGyjYeE4oJvA/LKiwVq8Ofeb4c=
+
+Name: assets/www/fonts/Action_Man-webfont.eot
+SHA1-Digest: +P7k+/Q8at+SkWcS9Tbgh1mPloc=
+
+Name: assets/www/images/twitter.png
+SHA1-Digest: zCJZzyKn5cSbXWwearch5pG/vfc=
+
+Name: res/xml/config.xml
+SHA1-Digest: ziwLmtZIUU0fzm43Lq63v90oiNM=
+
+Name: assets/www/images/basketball_game2.jpg
+SHA1-Digest: Acr3vm+I9l3YIAGn0GuUmTNfroI=
+
+Name: assets/www/images/basketball_game.jpg
+SHA1-Digest: iFky6fZjP7839s/5UNvXiHjAAFE=
+
+Name: assets/www/images/blue20opauge.png
+SHA1-Digest: /16o9hEgqw68VYGMEYJ4DjX+4oQ=
+
+Name: resources.arsc
+SHA1-Digest: fcqo+UxgUJ6TVN9rtNDLSCPkig4=
+
+Name: assets/www/images/basketball.png
+SHA1-Digest: 33WKLHLfIQRSCSUEpE8c3K3+6sw=
+
+Name: assets/www/phonegap.js
+SHA1-Digest: AtpaSyn/8lA4uxmpNjFoGf4DLKY=
+
+Name: res/drawable-ldpi/icon.png
+SHA1-Digest: p2unKxaccqCjWtzBc16W8KQQRVs=
+
+Name: AndroidManifest.xml
+SHA1-Digest: TrWQIUQVkiHMXMU/ctVIGp0Hbmk=
+
+Name: res/drawable-mdpi/icon.png
+SHA1-Digest: p2unKxaccqCjWtzBc16W8KQQRVs=
+
+Name: assets/www/images/basketballRed.png
+SHA1-Digest: lVAfHhHMun/VH5TG0on9iaok37E=
+
+Name: assets/www/wizard_logo.png
+SHA1-Digest: o8uvROKVj/rpeDQnhLBAATqwz2c=
+
+Name: assets/www/fonts/specimen_files/easytabs.js
+SHA1-Digest: /eYk7m56p8iPJn3eE/xFj0okcbU=
+
+Name: assets/www/images/courtSmall.jpg
+SHA1-Digest: b+UtY7s0VmCbVjrzQ5SXlmpGXuY=
+
+Name: assets/www/images/wizard_logo.png
+SHA1-Digest: o8uvROKVj/rpeDQnhLBAATqwz2c=
+
+Name: assets/www/fonts/Action_Man-demo.html
+SHA1-Digest: ABUZH5ppi596ROgItaWXVH5Poos=
+
+Name: assets/www/fonts/Action_Man-webfont.woff
+SHA1-Digest: vOGn+fRkR5k8VkmQvl1T88ZVOVs=
+
+Name: assets/www/images/blue30opauge.png
+SHA1-Digest: QASmOL9a1e2PG5M6eWR/azHvUsc=
+
+Name: assets/www/images/net.png
+SHA1-Digest: YBvy10seT3iKODUhx+7oE+9PfEQ=
+
+Name: res/drawable-xhdpi/icon.png
+SHA1-Digest: p2unKxaccqCjWtzBc16W8KQQRVs=
+
+Name: assets/www/js/modernizr-latest.js
+SHA1-Digest: TbJncE1+P7JInPlugoYqIkXNkxE=
+
+Name: assets/www/wizard_icon.ico
+SHA1-Digest: VGRc9Ihbn4SLDcslSdKMjPXzOaQ=
+
+Name: assets/www/styles.css
+SHA1-Digest: gDV43oKLXxCSzz38rDGQX7Whik8=
+
+Name: assets/www/js/mathLogic.js
+SHA1-Digest: U+mntvqgSCBQQ65swGj0ZRb2LQ4=
+
+Name: assets/www/images/basketballGreen.png
+SHA1-Digest: zeGmL/nJrEliBxA/6q+QeHEUw/w=
+
+Name: assets/www/images/basketball_game_dark.jpg
+SHA1-Digest: VWkpmZugAbS8fAr9yBzgOn41B8A=
+
+Name: assets/www/fonts/Action_Man-webfont.ttf
+SHA1-Digest: DS9jevmVCqu5igY0L6sCxmciJ9I=
+
+Name: classes.dex
+SHA1-Digest: i60D/g8mn23uPrbUyQz8uVxDAfw=
+
+Name: assets/www/js/timer.js
+SHA1-Digest: M/YGGzhI1xnIMpUZ9wI1yOek5P0=
+
+Name: assets/www/fonts/specimen_files/grid_12-825-55-15.css
+SHA1-Digest: hwxpU13+U+CsycXYWvXBmK+3VQ0=
+
+Name: assets/www/images/facebook.png
+SHA1-Digest: Mi5hUy8UvZtorGqC2KOiYBmbNuc=
+
+Name: assets/www/js/bballfunctions.js
+SHA1-Digest: XM51YyzwA9U7HcPJkKINkb7PNqE=
+
+Name: assets/www/images/basketballBlue.png
+SHA1-Digest: wK0hcCFhoJYiLz04RDolwtNU6bQ=
+
+Name: assets/www/cordova.js
+SHA1-Digest: AtpaSyn/8lA4uxmpNjFoGf4DLKY=
+
+Name: res/drawable/icon.png
+SHA1-Digest: V29pfkn63ZKvWbMehv1gXLydfEg=
+
+Name: assets/www/fonts/Action_Man-webfont.svg
+SHA1-Digest: pvsW51gPtFcSvQnjKPM5s6IrLUs=
+
+Name: assets/www/fonts/specimen_files/specimen_stylesheet.css
+SHA1-Digest: evaPYO1Lbw5w3v6n2jVV2DgT9WQ=
+
+Name: assets/www/fonts/specimen_files/Action_Man-cleartype.png
+SHA1-Digest: nUuYvhqeGtkYPhmuoMwgCy+sx+Y=
+
+Name: assets/www/images/blackboard.jpg
+SHA1-Digest: IomRsGqluY617YTYLds4kmgpJLA=
+
+Name: assets/www/index.html
+SHA1-Digest: 0ncHEGr+tlmyAyrEWtBE2NuVZ9A=
+
+Name: res/drawable-hdpi/icon.png
+SHA1-Digest: p2unKxaccqCjWtzBc16W8KQQRVs=
+
+Name: assets/www/fonts/stylesheet.css
+SHA1-Digest: vtzjExM4ODliXhryd/uhWqHPgj4=
+

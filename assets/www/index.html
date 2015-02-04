@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html>
+  <head>
+  <title>MathMagic Basketball</title>
+  <link rel="shortcut icon" href="wizard_icon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+  <link href="styles.css" rel="stylesheet" type="text/css">
+  <link href="fonts/stylesheet.css" rel="stylesheet" type="text/css">  
+  <script type="text/javascript" src="js/modernizr-latest.js"></script>
+  <script type="text/javascript" src="js/mathLogic.js"></script>
+  <script type="text/javascript" src="js/bballfunctions.js"></script>
+  <script type="text/javascript" src="js/timer.js"></script>
+  <script type="text/javascript" src="js/mainHeading.js"></script>
+  <script type='application/javascript' src='js/fastclick.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
+  
+    <script language="JavaScript">
+	window.addEventListener('load', function() {			//adding the fastclick polyfill c/o https://github.com/ftlabs/fastclick
+    FastClick.attach(document.body);
+	}, false);  
+   
+    function init2()
+    {
+    var canvas = document.getElementById("canvasLogo");
+    if(canvas.getContext)
+    {
+     var ctx = canvas.getContext("2d");
+     var ctx2 = canvas.getContext("2d");
+	 /********************************************/
+	 /* The following Vars set the position of   */
+	 /* the object in relation to the the canvas */
+	 /********************************************/
+	 var x1 = canvas.width / 1.97;
+     var y1 = canvas.height / 2.0;					
+	 var x2 = canvas.width / 1.69; 
+     var y2 = canvas.height / 1.24;
+
+     ctx.shadowOffsetX = -5;
+     ctx.shadowOffsetY = 5;
+     ctx.shadowBlur = 10;
+     ctx.shadowColor = "#ffff00";  
+     ctx.font = "italic bold 36px action_manregular";    
+	 ctx.textAlign = 'center';
+     ctx.fillStyle = "#ff0";
+     ctx.fillText( "MathMagic", x1, y1);        
+  
+     ctx2.shadowOffsetX = -4;
+     ctx2.shadowOffsetY = 4;
+     ctx2.shadowBlur = 10;
+	 ctx2.shadowColor = "aqua"; 
+     ctx2.font = " italic 30px action_manregular";     
+     ctx2.fillStyle = "aqua"; 
+     ctx2.rotate(-Math.PI/55);       
+     ctx2.fillText("Basketball",x2, y2);        
+     ctx2.lineWidth=0.8;
+     ctx2.strokeText("Basketball",x2, y2);     
+     }     
+    }
+    window.onload=function() {
+    init();
+    init2();     
+    }    
+    </script>
+  </head>  
+  
+  <body>
+    <div id="container">
+    <div id="header">
+     <header>
+        <div style="float: left; color:#ffff00;">    	 
+         <div id="gameTop">
+	       <div id="inGameScoreTop"> Score: 0</div>          
+         </div>           	 
+	    </div>
+	    
+        <div style="float: right;">
+          <div id="countdownClock">
+     	    <div id="timespanId"></div>        
+          </div>  
+        </div>
+       <!-- ************************************************* Scoreboard link *************************************************** -->
+        <div>   
+           <div id="notification_panel" style="background-color:blue;"></div>  <div id="scoreboardLink"><a href='javascript:resetScoreTable()'> Scoreboard </a></div> 
+        </div>                
+      </header>
+     </div> 
+    <div id="main">  
+
+	   <!-- *************************************************  1 Buttons ********************************************************  -->
+        <section id="introBlock" style="height:70px;">		
+          <div id="intro" class="inlineLevelButtons" >		    
+			    <div style="float: left;">
+				    <button id="addEasy" class="smallButton" 
+			    	         onclick="addEasy(); 
+			    	         additionFunction(); 
+			    	         startTimer();" style="width:80px">Easy   
+			    	</button>			
+			    </div>			    
+			    
+			    <div style="float: right;">			
+				    <button id="addDiff" class="smallButton" 
+			    	         onclick="addDiff(); 
+			    	         additionFunction(); 
+			    	         startTimer();"  style="width:80px">Hard
+			    	</button>			
+				</div>
+				
+				<div style="margin-left: 25px;">
+			        <button id="addNorm" class="smallButton" 
+			    	         onclick="addNorm(); 
+			    	         additionFunction(); 
+			    	         startTimer();"  style="width:80px">Normal
+			    	</button>				        			    
+			    </div>				
+	      </div><!-- end .inlinelevelButtons --> 
+        
+       <div id="instruction">
+	        	<p>Choose a level. Then select the basketball to put in the net. 10 points a correct answer. You have 60 seconds.</p>	        	
+	   </div><!-- end #instructions -->  
+	   
+	   	<!-- *************************************************  2 Equations ********************************************************* -->
+	   <div style="padding-top:10px;"><div id="question_output" class="number_font" style="padding:0 0 20px 0; margin-top:45px;"></div> </div>                     
+	 </section>  
+	 
+	 	<!-- *************************************************  3 Dropzone ********************************************************* -->
+			<section style="margin: 85px 0;">                              
+			<div align="center">
+			<div id="behindBoard">
+			<div id="innerBoard">
+			   <div class="dropzone-image" align="center">  
+			    <div id="drop_zone"></div>			  
+			   </div>
+			 </div>
+			</div>
+			<div id="label"><canvas id="canvasLogo" height="90" width="220" style="background-color: transparent;"></canvas></div>    
+			</div>			
+			</section>
+			
+	 <!-- ****************************************************  4 Basketballs ****************************************************** -->	 
+	  <section style=" text-align:center;">     
+      <div id="ballTable" align="center" style="margin: 10% 0 0;">	
+		    <table>	    
+		    <tr>
+		    	<td><div id="bball1" class="number_font" onclick="ballSelection(this.id)"></div></td>    <!-- this.id - sends the ID of the clicked basketball to the ballSelection function -->
+		    	<td><div id="bball2" class="number_font" onclick="ballSelection(this.id)"></div></td>
+			    <td><div id="bball3" class="number_font" onclick="ballSelection(this.id)"></div></td>
+				<td><div id="bball4" class="number_font" onclick="ballSelection(this.id)"></div></td>				
+			</tr>
+			</table>			
+	   </div>  
+       </section>          	      
+	</div><!-- end main -->
+      
+      <!--  *************************************************   5  Scoreboard  ***************************************************** --> 
+    <div id="scoresTable" align="center">
+    	 <section>	    	 
+		    	 <button class="largeButton" onclick="resetFunction()" style="width:100px; margin:0 10px;">Back</button>
+		    	 <button class="largeButton" onclick="clearLocalStorage()" style="width:100px; margin:0 10px;">Clear</button>		    	
+		 </section>    
+	     <section id="gameTable">
+	           <div id="inGameScoreTable">Scores</div>             	
+	           <span> <ol id="bb" class="high-scores"></ol></span> 
+		 </section> 
+	</div>
+      <footer id="footer"> 
+       <div style=" text-align:center;">
+		    <div style="margin:6px 0px 4px;">
+			  <a href="https://www.facebook.com/sharer/sharer.php?u=http://mathbasketball.x10host.com/"><img src="images/facebook.png" alt="Facebook" width="32" height="32" style="border-radius: 5px;"></a>
+			  <a href="http://twitter.com/share?text=An%20Awesome%20Link&url=http://mathbasketball.x10host.com/"><img src="images/twitter.png" alt="Twitter" width="32" height="32" style="border-radius: 5px;"></a>	
+			  <a href="https://plus.google.com/share?url=http://mathbasketball.x10host.com/"><img src="images/googleplus.png" alt="Google Plus" width="32" height="32" style="border-radius: 5px;"></a>
+			</div>
+			<div id="footermessage">
+              &copy;itb 2014, Ger Byrne <a href="mailto:B00045428@student.itb.ie">B00045428@student.itb.ie</a>
+            </div>
+		</div>
+      </footer>
+    </div>
+  </body>
+</html>

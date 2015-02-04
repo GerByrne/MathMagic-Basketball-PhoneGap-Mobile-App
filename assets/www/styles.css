@@ -1,0 +1,403 @@
+﻿body, #main ul, #main li, h1 {
+    margin:0; 
+    padding:0;
+    height:100%;
+  }
+body {
+  	font-family: 'action_manregular', Arial, sans-serif;	
+	color: #fff;
+    background: url(images/courtSmall.jpg) no-repeat;   
+  }
+  
+ *:focus { outline: none; }  /* ensure that no outline is drawn around any element */
+  
+ * {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);  /* Avoid wrapping of button in a clunky green or orange border */
+}
+ 
+button.smallButton, button.largeButton {
+    display: inline;
+    text-align:center;    
+    font-family: 'action_manregular', Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;       
+    color: #FFFF00; 
+    background-color: #0000FF;
+    background: -webkit-linear-gradient(#888, #0000FF);
+    background: linear-gradient(#888, #0000FF);
+    border: 0 none;
+    border-radius: 6px;
+    text-shadow: 0 -1px 0 #000;
+    box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+    cursor: pointer;        
+    }
+   
+button.smallButton:link, button.smallButton:visited, button.largeButton:link, button.largeButton:visited {	
+	background-color: #8FCF45; 
+	-webkit-transition: color .5s linear, background-color .5s ease-in-out;
+	-moz-transition: color .5s linear, background-color .5s ease-in-out;
+	-o-transition: color .5s linear, background-color .5s ease-in-out;
+	transition: color .5s linear, background-color .5s ease-in-out;
+}
+
+#bball1  { 
+	background-color: transparent; 
+    background-size:66px 66px;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: navy;
+    padding:0px;          																				
+    text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;    /*CSS3*/    
+}
+
+#bball2  {    
+    background-color: transparent;
+    background-size:66px 66px;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: red;
+    padding:0px;
+    text-shadow: -1px 0 cyan, 0 1px cyan, 1px 0 cyan, 0 -1px cyan;    /*CSS3*/    
+}
+
+#bball3  {
+    background-color: transparent;
+    background-size:66px 66px;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: white;
+    padding:0px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    /*CSS3*/
+}
+
+#bball4  {
+    background-color: transparent;
+    background-size:66px 66px;
+    background-repeat:no-repeat;
+    background-position:center;
+    color: yellow;
+    padding:0px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	/*CSS3*/     
+}
+
+#ballTable {
+	display:none;
+}
+
+#container {     
+    margin:0 10px;
+}
+
+#label {	
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	width: 100%;	 
+}
+
+#countdownClock {
+   display:inline;
+   margin-bottom:0px;
+}
+
+/*********************************** Net & Hoop **************************************/
+#behindBoard { 	  
+    margin:15px 0 0 0px; 
+    background-color:#fff;    
+    /*margin:20px 20px 20px 24px;*/
+    width:220px;
+    height:140px;	
+	border:5px solid #F00;	
+    border-top-left-radius: 65px;
+	border-top-right-radius: 65px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+} 
+
+#innerBoard {	
+	width:130px;
+	height:65px;
+	background-color: transparent;
+	position: relative; 
+	left:0px;
+	right:0px;
+	top:70px;	           
+	border-top:5px solid #F00;
+    border-left: 5px solid #F00;
+    border-right:5px solid #F00;  
+    border-top-left-radius:9px;
+    border-top-right-radius:9px;     
+}
+
+#drop_zone {
+	/*border:2px dotted blue;*/ 	
+	width:120px;
+	height:105px;
+	background-color: transparent;
+	position:absolute; 		 
+	top:0px;      
+}
+
+.dropzone-image{
+	/*border:1px dashed red;*/    
+	position: relative;
+	background: url(images/net.png) no-repeat;
+	background-size: 125px 115px;	 
+    width: 125px; 
+    height: 115px; 
+    left: 0px;    
+    top: 20px;          
+}	
+
+/*************************************************************************************/
+
+header {
+    display:block;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;   
+}
+
+footer {
+	display:block;
+	position:absolute;
+    bottom:10px;
+    width:100%;    
+    /* position: fixed; */   
+    left: 0;   
+    color: #fff;
+    text-align: center;   
+}
+  
+.inlineLevelButtons {	 
+	text-align:center; 
+    padding: 45px 10px 0;  
+}  
+  
+#footermessage { 
+  	clear: left;
+	width: 100%;  
+  	font-size:small;		
+	padding: 0px 0%;	
+}
+	
+#footermessage a {
+	color: yellow;
+}
+
+#inGameScoreTop {
+    visibility:hidden;
+	text-align: left;
+	font-size:1.2em;
+	text-shadow:0 0 10px #fff, 0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 40px #00d2ff, 0 0 50px #00d2ff, 0 0 60px #00d2ff, 0 0 70px #00d2ff;
+}
+
+#intro {
+    display:block;
+}
+	
+introBlock{
+	 display:block;
+}
+
+#instruction {
+	display:block;	
+	text-align: justify;
+	color:#ffff00;
+	font-size:1.1em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 4px 4px 10px red;  
+}
+
+#notification_panel {
+	/* height:20px; */ 
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;	 
+	font-weight:bold;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 4px 4px 10px red;            /*may not be needed */  	
+}
+
+.number_font{ 
+   background-color: transparent;   
+   font-size:30px;
+   font-weight:bold;
+   color:#fff; 
+   height: 58px;   
+   /* padding:80px 0px; */       
+   text-align: center;     
+   -webkit-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;      
+}
+
+#question_output { 
+	display:none;
+	/*background-image:url('images/chalk.jpg');  */
+	background-image:url('images/blackboard.jpg'); 
+    background-size:295px 50px;
+    background-position:center;
+    margin:5px auto;   
+	width:270px;
+	height:30px;
+	/*padding:50px; */
+	border:3px white ridge;    
+}
+
+/**************************** Scoreboard **************************/
+#scoreboardLink{
+	visibility:visible;
+	position: absolute;
+	top: 3px;
+	left: 0px;
+	width: 100%;
+} 
+
+#scoresTable {
+	display:none; 
+	margin:15px 0 0; 
+}
+
+ol.high-scores { 
+	font-size:1.2em; 
+	text-align: left;
+	padding-left:80px; /* this aligns the scoreboard text */
+	/* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 4px 4px 10px red; */    
+}
+
+ol { margin:4px; }
+    
+section#gameTable {
+	background:url('images/blue30opauge.png');
+    margin: 25px 0 0px; 
+    padding: 0 6px 0px;
+    font-size:1.2em;
+	width:250px;
+	height:350px; 
+	color:#ffff00;	
+	text-shadow:0 0 10px #ffff00, 0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 40px #00d2ff, 0 0 50px #00d2ff, 0 0 60px #00d2ff, 0 0 70px #00d2ff;
+	border-radius: 15px;
+}
+
+/* Score */
+#inGameScoreTable {	
+	padding: 15px 0 0px;
+	font-size:1.2em;
+	text-shadow:0 0 10px #ffff00, 0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 40px #00d2ff, 0 0 50px #00d2ff, 0 0 60px #00d2ff, 0 0 70px #00d2ff;
+}
+
+/******************************************************************/
+ 
+#timespanId {
+   color:#fff;
+   font-weight:bold;
+   /*font-family: 'action_manregular', Arial, sans-serif;*/
+   font-size:1.2em;
+   text-shadow:0 0 10px #fff, 0 0 20px #00d2ff, 0 0 30px #00d2ff, 0 0 40px #00d2ff, 0 0 50px #00d2ff, 0 0 60px #00d2ff, 0 0 70px #00d2ff;
+   
+ }
+ 
+ .bballStyle {
+  display: inline-block;
+  position: relative;
+  left: 0px; 
+  top: 0px; 
+  width: 66px; 
+  height: 66px;
+}
+
+/* Wobble Vertical */
+@-webkit-keyframes wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.wobble-vertical {
+  display: inline-block;
+  left: 0px; 
+  top: 0px; 
+  width: 66px; 
+  height: 66px;  
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.wobble-vertical, .wobble-vertical:focus, .wobble-vertical:active {
+  -webkit-animation-name: wobble-vertical;
+  animation-name: wobble-vertical;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/*************************************************************************/
+
+
